@@ -17,7 +17,7 @@ function Login() {
 
     await axios
       .post(
-        "http://localhost:3001/user/login",
+        "https://fullstack-1server.vercel.app/login",
         { email, password },
         { withCredentials: true }
       )

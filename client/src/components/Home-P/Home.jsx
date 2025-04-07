@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     axios.defaults.withCredentials = true;
     axios
-      .get("http://localhost:3001/users")
+      .get("https://fullstack-1server.vercel.app/users")
       .then((result) => {
         console.log("Result from /users:", result.data);
 

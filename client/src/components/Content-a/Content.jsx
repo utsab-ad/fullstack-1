@@ -41,7 +41,7 @@ function Content() {
             This project showcases **secure authentication, user registration, and
             a dynamic UI.** It’s built for learning and scaling real-world applications.
           </p>
-          <a href="https://github.com/your-repo" className="btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/utsab-ad" className="btn" target="_blank" rel="noopener noreferrer">
             View on GitHub
           </a>
         </div>

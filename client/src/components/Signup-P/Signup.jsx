@@ -15,7 +15,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/user/register", { name, email, password, skills})
+      .post("https://fullstack-1server.vercel.app/user/register", { name, email, password, skills})
       .then((result) => {console.log(result)
         navigate("/user/login");
       })
