@@ -5,22 +5,24 @@ import RegModel from "./models/Reg.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
+import dotenv from 'dotenv';
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://fullstack-101.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
 app.use(cookieParser());
 
-mongoose.connect(
-  "mongodb+srv://utsabadhikari075:CvqlS1AJWTBdEd1o@cluster0.yafcifx.mongodb.net/UserData?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(process.env.MONGO_URI)
+
 
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token;
